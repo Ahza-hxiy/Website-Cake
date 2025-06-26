@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fffdf9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff8fab;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #4a4a4a;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff8fab;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff8fab;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.btn-nav {
+  background-color: #ff8fab;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-nav:hover {
+  background-color: #f7709c;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #fff0f5, #ffe4e1);
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+  animation: fadeInLeft 1s ease;
+}
+
+.hero-text h1 {
+  font-size: 44px;
+  color: #d6416f;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.btn-main {
+  background-color: #ff8fab;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-main:hover {
+  background-color: #f65f8a;
+}
+
+.hero-img {
+  flex: 1;
+  text-align: center;
+  
+}
+
+.hero-img img {
+  max-width: 90%;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Section Produk */
+.produk-highlight {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+}
+
+.produk-highlight h2 {
+  font-size: 32px;
+  color: #d6416f;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease;
+}
+
+.produk-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.produk-item {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produk-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.produk-item h3 {
+  font-size: 18px;
+  color: #3d405b;
+}
+
+.produk-item:hover {
+  animation: bubble 0.8s ease-in-out forwards;
+}
+
+@keyframes bubble {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1.02); }
+}
+
+
+.cart-link img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffe4eb;
+  padding: 6px;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.cart-link img:hover {
+  transform: scale(1.15);
+}
+
+.footer {
+  background: linear-gradient(to top, #fff0f5, #ffe4e1);
+  padding: 50px 60px 20px;
+  color: #5c5c5c;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+.footer-social {
+color: #f65f8a;
+
+
+}
+.footer-social .social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 12px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+
+.footer-social .social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #999;
+}
